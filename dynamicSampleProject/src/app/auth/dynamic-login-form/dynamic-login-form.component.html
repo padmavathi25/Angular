@@ -1,0 +1,42 @@
+  <!-- <h3>{{form.formTitle}}</h3>
+  <form  #myForm="ngForm" [formGroup]="dynamicFormGroup" class="row g-3">
+  <ng-container *ngFor="let control of form.formControls">
+    <div *ngIf = "['text','email','password'].includes(control.type)" [class]="control.class">
+      <label class="form-label">{{control.label}}</label>
+      <input formControlName="{{control?.name}}" [type]="control?.type" class="form-control field">
+      <small *ngIf="dynamicFormGroup.get(control.name)?.invalid && (dynamicFormGroup.get(control.name)?.touched || myForm.submitted)" class="text-danger">
+        {{getValidationErrors(control)}}
+      </small>
+    </div>
+  </ng-container>
+  <div class="col-12">
+    <button (click)="onSubmit()" type="button" class="btn btn-primary mx-2">{{form.saveBtnTitle}}</button>
+    <button (click)="resetForm()" type="button" class="btn btn-secondary mx-2">{{form.resetBtnTitle}}</button>
+  </div>
+  </form> -->
+  <!-- <div class="loginImage"  *ngIf="form.imageUrl">
+    <img [src]="form.imageUrl" alt="Login Image">
+  </div> -->
+
+  <div class="container"  [style.backgroundImage]="'url(' + form.imageUrl + ')'">
+    <div class="row">
+      <div class="col-lg-6 loginform" >
+        <h3>{{form.formTitle}}</h3>
+        <form #myForm="ngForm" [formGroup]="dynamicFormGroup" class="row g-3">
+          <ng-container *ngFor="let control of form.formControls">
+            <div *ngIf="['text', 'email', 'password'].includes(control.type)" [class]="control.class">
+              <label class="form-label">{{control.label}}</label>
+              <input formControlName="{{control?.name}}" [type]="control?.type" class="form-control field">
+              <small *ngIf="dynamicFormGroup.get(control.name)?.invalid && (dynamicFormGroup.get(control.name)?.touched || myForm.submitted)" class="text-danger">
+                {{getValidationErrors(control)}}
+              </small>
+            </div>
+          </ng-container>
+          <div class="col-12">
+            <button (click)="onSubmit()" type="button" class="btn btn-primary mx-2">{{form.saveBtnTitle}}</button>
+            <button (click)="resetForm()" type="button" class="btn btn-secondary mx-2">{{form.resetBtnTitle}}</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

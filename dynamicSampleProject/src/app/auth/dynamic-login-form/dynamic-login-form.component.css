@@ -1,0 +1,22 @@
+
+
+.loginform {
+  margin-top: 0%;
+  margin-left: 73%;
+  margin-bottom: 20%;
+  max-width: 90%;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+.container {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 98vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
